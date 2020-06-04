@@ -55,7 +55,7 @@ class Location extends StatelessWidget {
             onTap: () {
               () async {
                 final result = await Navigator.of(context).push(MaterialPageRoute(builder: (_) => CityList(hasClose: true)));
-                if (result != city.value) city.value = result;
+                if (result != null && result != city.value) city.value = result;
               }();
             },
           ),

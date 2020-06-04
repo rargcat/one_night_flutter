@@ -49,7 +49,7 @@ class HotelList extends StatelessWidget {
           onTap: () {
             () async {
               final result = await Navigator.of(context).push(MaterialPageRoute(builder: (_) => CheckInOut(city.value)));
-              if (result != city.value) city.value = result;
+              if (result != null && result != city.value) city.value = result;
             }();
           },
         ),

@@ -79,7 +79,7 @@ class CheckInOut extends StatelessWidget {
                           onTap: () {
                             () async {
                               final result = await Navigator.of(context).push(MaterialPageRoute(builder: (_) => CityList(hasClose: true)));
-                              if (result != value) {
+                              if (result != null && result != value) {
                                 oldCity = value;
                                 city.value = result;
                               }
